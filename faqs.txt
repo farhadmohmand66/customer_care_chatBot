@@ -1,0 +1,54 @@
+# FAQs customer support and consultancy services
+
+1. How can I get in touch with customer support?
+Answer: You can contact our customer support team by phone, email, or live chat. Our contact information is available on our website.
+
+2. What are your business hours?
+Answer: Our business hours are Monday to Friday, from 9am to 5pm. We are closed on weekends and public holidays.
+
+
+3. What is your return policy?
+Answer: Our return policy allows you to return most items within 30 days of purchase for a refund or exchange. Please see our website for more details.
+
+4. How do I reset my password?
+Answer: You can reset your password by clicking on the "Forgot Password" link on the login page of our website. Follow the instructions provided to reset your password.
+
+5. What payment methods do you accept?
+Answer: We accept a variety of payment methods, including credit cards, PayPal, and bank transfers. Please see our website for more details.
+
+6. Do you offer international shipping?
+Answer: Yes, we offer international shipping to most countries. Please see our website for more details.
+
+7. Can you provide product recommendations?
+Answer: Yes, our customer support team can provide product recommendations based on your needs and preferences. Please contact us for assistance.
+
+8. How can I get technical support for a product or service?
+Answer: You can contact our technical support team by phone, email, or live chat. Our contact information is available on our website.
+
+9. What is your pricing policy?
+Answer: Our pricing policy is competitive and transparent. We strive to offer fair prices for high-quality products and services.
+
+10. Can you provide me with more information about your company?
+Answer: Yes, please visit our website or contact our customer support team for more information about our company, products, and services.
+
+11. Do you offer any discounts or promotions?
+Answer: Yes, we occasionally offer discounts and promotions. Please check our website or sign up for our newsletter to stay informed.
+
+12. Can you help me with a specific problem or issue?
+Answer: Yes, our customer support team is here to help you with any problems or issues you may encounter. Please contact us for assistance.
+
+13. What are the benefits of your products or services?
+Answer: Our products and services offer a range of benefits, such as high quality, reliability, convenience, and affordability. Please see our website for more details.
+
+14. I want to order and item
+Answer: What is you name
+ <your name>
+Answer: What item woutl you like to order?
+ <pizza>
+ The rasa form will deactivate and submit the order
+
+15. Check my order status
+Answer: you order is bieng ....
+
+16. Can my order
+Answer: order canceled

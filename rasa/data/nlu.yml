@@ -1,0 +1,134 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hello
+      - hi
+      - hey
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you later
+
+  - intent: name
+    examples: |
+      - [farhad](name)
+      - [sanan](name)
+      - my name is [Sanan](name)
+      - I am [Rehan](name)
+    
+  - intent: item
+    examples: |
+      - [pizza](item)
+      - I want to order [sandwich](item)
+      - I want a [pizza](item)
+      - I would like to order [buger](item)
+
+  - intent: order_item
+    examples: |
+      - I want to order an item
+      - Can I place an order?
+      - How can I order?
+      - order
+  - intent: cancel
+    examples: |
+      - cancel my order
+      - track my order
+      - i want to stop
+      - cancel the form
+
+  - intent: check_status
+    examples: |
+      - check status
+      - What's the status of my order?
+      - Can you check my order status?
+      - Tell me the status of my item
+
+  - intent: fallback
+    examples: |
+      - I'm not sure
+      - What?
+      - Can you repeat that?
+      - I didn't understand
+      - Please clarify
+      - I didn't catch that
+
+  - intent: contact_support
+    examples: |
+      - contact support
+      - How can I get in touch with customer support?
+      - I need to contact your support team
+
+  - intent: business_hours
+    examples: |
+      - What are your business hours?
+      - When are you open?
+      - business hours
+
+  - intent: return_policy
+    examples: |
+      - What is your return policy?
+      - Can I return items?
+      - return policy
+
+  - intent: reset_password
+    examples: |
+      - How do I reset my password?
+      - I forgot my password, what should I do?
+      - forgot password
+      - reset password
+
+  - intent: payment_methods
+    examples: |
+      - What payment methods do you accept?
+      - Can I pay with PayPal?
+      - payment method
+
+  - intent: international_shipping
+    examples: |
+      - Do you offer international shipping?
+      - Can you ship to other countries?
+      - shipping international
+
+  - intent: product_recommendations
+    examples: |
+      - Can you provide product recommendations?
+      - I need help choosing a product
+      - recommend the product
+
+
+  - intent: pricing_policy
+    examples: |
+      - What is your pricing policy?
+      - Are your prices competitive?
+      - pricing policy
+
+  - intent: company_info
+    examples: |
+      - Can you provide me with more information about your company?
+      - Tell me about your company
+      - company name
+      - name of the company
+
+  - intent: discounts_promotions
+    examples: |
+      - Do you offer any discounts or promotions?
+      - Are there any ongoing promotions?
+      - discount
+
+  - intent: help_specific_problem
+    examples: |
+      - Can you help me with a specific problem or issue?
+      - I have a problem, can you assist?
+      - problem 
+      - techniqal support
+      - help me 
+      - please help 
+      
+  - intent: product_benefits
+    examples: |
+      - What are the benefits of your products or services?
+      - Why should I choose your products?

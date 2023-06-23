@@ -1,0 +1,126 @@
+version: "3.1"
+
+stories:
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: place order
+  steps:
+  - intent: order_item
+  - action: order_form
+  - active_loop: order_form
+  - slot_was_set:
+    - requested_slot: name
+  - slot_was_set:
+    - name: farhad
+  - slot_was_set:
+    - requested_slot: item
+  - slot_was_set:
+      - item: shirt
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_order_confirmation
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Reject Form
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: order_item
+  - action: order_form
+  - active_loop: order_form
+  - slot_was_set:
+    - requested_slot: name
+  # - slot_was_set:
+  # - name: Sanan
+  - intent: cancel
+  - action: action_cancel
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Check item status
+  steps:
+  - intent: check_status
+  - action: action_check_order_status
+
+- story: contact support
+  steps:
+  - intent: contact_support
+  - action: action_contact_support
+
+- story: business hours
+  steps:
+  - intent: business_hours
+  - action: action_business_hours
+
+- story: return policy
+  steps:
+  - intent: return_policy
+  - action: action_return_policy
+
+- story: reset password
+  steps:
+  - intent: reset_password
+  - action: action_reset_password
+
+- story: payment methods
+  steps:
+  - intent: payment_methods
+  - action: action_payment_methods
+
+- story: international shipping
+  steps:
+  - intent: international_shipping
+  - action: action_international_shipping
+
+- story: product recommendations
+  steps:
+  - intent: product_recommendations
+  - action: action_product_recommendations
+
+- story: pricing policy
+  steps:
+  - intent: pricing_policy
+  - action: action_pricing_policy
+
+- story: company info
+  steps:
+  - intent: company_info
+  - action: action_company_info
+
+- story: discounts and promotions
+  steps:
+  - intent: discounts_promotions
+  - action: action_discounts_promotions
+
+- story: help specific problem
+  steps:
+  - intent: help_specific_problem
+  - action: action_help_specific_problem
+
+- story: product benefits
+  steps:
+  - intent: product_benefits
+  - action: action_product_benefits
+
+- story: Fallback - User provides an irrelevant query
+  steps:
+  - intent: fallback
+  - action: action_default_fallback
+
+- story: Fallback - User provides a wrong input
+  steps:
+  - intent: fallback
+  - action: action_default_fallback

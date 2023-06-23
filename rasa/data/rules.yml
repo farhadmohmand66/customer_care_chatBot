@@ -1,0 +1,43 @@
+version: "3.1"
+
+rules:
+  - rule: Handle greeting
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Activate form
+    steps:
+    - intent: order_item
+    - action: order_form
+    - active_loop: order_form
+
+  - rule: Submit form
+    condition:
+    - active_loop: order_form
+    steps:
+    - action: order_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: utter_order_confirmation
+
+  - rule: cancel
+    steps:
+      - intent: cancel
+      - action: action_cancel
+
+  - rule: Handle fallback
+    steps:
+      - intent: fallback
+      - action: action_default_fallback
+
+  - rule: Handle goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Check item status
+    steps:
+      - intent: check_status
+      - action: action_check_order_status

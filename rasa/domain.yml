@@ -1,0 +1,173 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - order_item
+  - check_status
+  - cancel
+  - name
+  - item
+  - fallback  # Add fallback intent
+  - contact_support
+  - business_hours
+  - return_policy
+  - reset_password
+  - payment_methods
+  - international_shipping
+  - product_recommendations
+  - pricing_policy
+  - company_info
+  - discounts_promotions
+  - help_specific_problem
+  - product_benefits
+
+entities:
+  - name
+  - item
+
+forms:
+  order_form:
+    required_slots:
+      - name
+      - item
+
+
+slots:
+  name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: name
+  item:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: item
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you today?"
+
+  utter_goodbye:
+    - text: "Goodbye! Have a great day."
+
+  utter_ask_name:
+    - text: "What's your name?"
+
+  utter_ask_item:
+    - text: "What item would you like to order?"
+
+  utter_order_confirmation:
+    - text: "Thank you, {name}! Your order for {item} has been placed."
+
+  utter_ask_order_status:
+    - text: "Sure, could you please provide your name?"
+
+  utter_order_status:
+    - text: "The status of the order {name} is bieng processed."
+
+  utter_cancel:
+    - text: "Order canceled."
+
+  utter_contact_support:
+    - text: "You can contact our customer
+        support team by phone, email, or live chat.
+          Our contact information is available on
+            our website."
+
+  utter_business_hours:
+    - text: "Our business hours are Monday to
+        Friday, from 9am to 5pm. We are closed on
+          weekends and public holidays."
+
+
+  utter_return_policy:
+    - text: "Our return policy allows you to 
+        return most items within 30 days of 
+          purchase for a refund or exchange. 
+            Please see our website for more details."
+
+  utter_reset_password:
+    - text: "You can reset your password by 
+        clicking on the 'Forgot Password' link 
+          on the login page of our website. Follow 
+            the instructions provided to reset your
+              password."
+
+  utter_payment_methods:
+    - text: "We accept a variety of payment 
+        methods, including credit cards, PayPal, 
+          and bank transfers. Please see our website 
+            for more details."
+
+  utter_international_shipping:
+    - text: "Yes, we offer international 
+        shipping to most countries. Please 
+          see our website for more details."
+
+  utter_product_recommendations:
+    - text: "Yes, our customer support team 
+        can provide product recommendations 
+          based on your needs and preferences. 
+            Please contact us for assistance."
+
+  utter_pricing_policy:
+    - text: "Our pricing policy is competitive 
+        and transparent. We strive to offer fair 
+          prices for high-quality products and services."
+
+  utter_company_info:
+    - text: "For more information about our 
+        company, products, and services, please
+          visit our website or contact our 
+            customer support team."
+
+  utter_discounts_promotions:
+    - text: "Yes, we occasionally offer 
+        discounts and promotions. Please check 
+          our website or sign up for our 
+            newsletter to stay informed."
+
+  utter_help_specific_problem:
+    - text: "Yes, our customer support 
+        team is here to help you with any 
+          problems or issues you may encounter. 
+            Please contact us for assistance."
+
+  utter_product_benefits:
+    - text: "Our products and services offer 
+        a range of benefits, such as high quality, 
+          reliability, convenience, and affordability. 
+            Please see our website for more details."
+
+
+  utter_default_fallback:
+    - text: "could you repeat the question?."
+
+
+actions:
+  - action_check_order_status
+  - action_cancel
+  - action_contact_support
+  - action_business_hours
+  - action_return_policy
+  - action_reset_password
+  - action_payment_methods
+  - action_international_shipping
+  - action_product_recommendations
+  - action_pricing_policy
+  - action_company_info
+  - action_discounts_promotions
+  - action_help_specific_problem
+  - action_product_benefits
+  - utter_order_confirmation
+  - utter_goodbye
+  - utter_greet
+  - action_default_fallback
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
