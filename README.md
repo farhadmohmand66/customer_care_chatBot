@@ -39,7 +39,8 @@ Here are three general steps for developing a chatbot using Rasa and integrating
     session_persistence: true
   ```
 - To integrate Rasa Webchat into your website copy the below script and added it into the HTML file of the application
-  or visit the website [link](https://github.com/botfront/rasa-webchat) for more options and libraries.
+  or visit the `official website:` https://github.com/botfront/rasa-webchat for more options and libraries.
+
 
 ```html
 <script>
@@ -70,3 +71,9 @@ Here are three general steps for developing a chatbot using Rasa and integrating
   run the chatbot and website again. To run the Rasa chatbot, navigate to the Rasa directory in any terminal and run
   the command: "rasa run actions". Open a new terminal and run the API using the command: `rasa run -m models --enable-api --cors "*" `.  
   Finally, run the Django server using the command: `python manage.py runserver` in the base directory.
+
+
+  ## 🔗 Contact:
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/farhadmohmand66/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/farhadMohmand66)
+[![whatsApp](https://img.shields.io/badge/WhatsApp-1DA1F2?style=for-the-badge&logo=whatsApp&logoColor=white)](https://wa.me/03469869529?text=)
