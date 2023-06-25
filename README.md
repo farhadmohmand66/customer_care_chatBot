@@ -71,7 +71,10 @@ Here are three general steps for developing a chatbot using Rasa and integrating
   run the chatbot and website again. To run the Rasa chatbot, navigate to the Rasa directory in any terminal and run
   the command: "rasa run actions". Open a new terminal and run the API using the command: `rasa run -m models --enable-api --cors "*" `.  
   Finally, run the Django server using the command: `python manage.py runserver` in the base directory.
+- Screenshot of Rasa Chatbot is follows:
 
+ 
+  ![CustomerCareBot](rasaBot.jpg)
 
   ## 🔗 Contact:
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/farhadmohmand66/)
