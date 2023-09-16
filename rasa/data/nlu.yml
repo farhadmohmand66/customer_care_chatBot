@@ -6,6 +6,7 @@ nlu:
       - hello
       - hi
       - hey
+      - good morning
 
   - intent: goodbye
     examples: |
@@ -126,7 +127,9 @@ nlu:
       - problem 
       - techniqal support
       - help me 
-      - please help 
+      - please help
+      - need help
+      - Help
       
   - intent: product_benefits
     examples: |
