@@ -11,6 +11,7 @@
 </head>
 <body>
     <h1>chatbot</h1>
+
     <script>!(function () {
             let e = document.createElement("script"),
                 t = document.head || document.getElementsByTagName("head")[0];
@@ -25,12 +26,14 @@
                         customData: { language: "en" },
                         socketUrl: "http://localhost:5005",
                         title: 'Rasa Bot',
-                        subtitle: 'Say Hi to get start',
-                        // profileAvatar: "static/bot (2).png",
-                        // openLauncherImage: "svg/ui_2.PNG",
-                        // closeImage: "static/userAvatar.jpg",
-                        // showMessageDate: true,
-                    // add other props here
+                        // subtitle: 'Say Hi to get start',
+                        profileAvatar: "static/bot.png",
+                        openLauncherImage: "./static/bot.PNG",
+                        closeImage: "static/userAvatar.jpg",
+                        showMessageDate: true,
+                        inputTextFieldHint: "What's in your mind?...",
+                        embedded: true,
+            
                     },
                     null
                     );
