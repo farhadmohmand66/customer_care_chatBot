@@ -20,7 +20,7 @@ class ActionCheckStatus(Action):
             dispatcher.utter_message(
                 response="utter_order_status", name=name)
         else:
-            dispatcher.utter_message(text=f"Sorry, no order found.")
+            dispatcher.utter_message(text=f"Sorry, not found your answer.")
         return []
 
 class CancelOrderAction(Action):

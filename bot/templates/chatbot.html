@@ -1,23 +1,25 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Rasa Chatbot</title>
-    <style>
-        .rw-conversation-container .rw-header{
-            background-color: rgb(255, 145, 0);
-        }
-
-    </style>
 </head>
 <body>
-    <h1>chatbot</h1>
+    <h1> Customer Care</h1>
+    <img src="{% static 'bot/images/userAvatar.jpg' %}" />
+    <p>You can ask about company , product , help , recommendation , contact detail etc</p>
+    <style>
+        .rw-conversation-container .rw-header{background-color:hsl(250, 69%, 61%);}
+        .rw-conversation-container .rw-messages-container .rw-message .rw-client{background-color: hsl(250, 69%, 61%);}
+        .rw-launcher{background-color: hsl(250, 69%, 61%);}
+        .rw-conversation-container .rw-reply{background-color: hsl(250, 69%, 61%); border: 1px solid hsl(250, 69%, 61%);}
+    </style>
 
     <script>!(function () {
             let e = document.createElement("script"),
                 t = document.head || document.getElementsByTagName("head")[0];
             (e.src =
                 "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
-              // Replace 1.x.x with the version that you want
                 (e.async = !0),
                 (e.onload = () => {
                 window.WebChat.default(
@@ -26,14 +28,17 @@
                         customData: { language: "en" },
                         socketUrl: "http://localhost:5005",
                         title: 'Rasa Bot',
-                        // subtitle: 'Say Hi to get start',
-                        profileAvatar: "static/bot.png",
-                        openLauncherImage: "./static/bot.PNG",
-                        closeImage: "static/userAvatar.jpg",
+                        profileAvatar: "{% static 'bot/images/bot.png' %}",
+                        openLauncherImage: "{% static 'bot/images/typing.svg' %}",
+                        closeImage: "{% static 'bot/images/minimize.svg' %}",
                         showMessageDate: true,
-                        inputTextFieldHint: "What's in your mind?...",
-                        embedded: true,
-            
+                        inputTextFieldHint: "I am customercare, ask me..",
+                        customMessageDelay: (message) => {
+                            let delay = message.length * 40;
+                            if (delay > 3 * 1000) delay = 3 * 1000;
+                            if (delay < 800) delay = 800;
+                            return delay;
+                        }
                     },
                     null
                     );
