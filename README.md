@@ -70,16 +70,13 @@ Here are three general steps for developing a chatbot using Rasa and integrating
   })();
 </script>
 ```  
-<<<<<<< HEAD
 - Make sure to change the API socketUrl to `http://localhost:5005` in the copied script. Once these changes are done,
   run the chatbot and website again. To run the Rasa chatbot, navigate to the Rasa directory in any terminal
   run the API using the command: `rasa run -m models --enable-api --cors "*" --debug` and  and run
   the command: `rasa run actions`.  
-=======
 - Make sure to change the API socketUrl to `http://localhost:5005` in the copied script. Once these changes are made,
   run the chatbot and website again. To run the Rasa chatbot, navigate to the Rasa directory in any terminal and run
   the command: "rasa run actions". Open a new terminal and run the API using the command: `rasa run -m models --enable-api --cors "*" --debug ` and then run `rasa run actions`.  
->>>>>>> 0e4647b9bf29404d6620490193f6e02973e93f30
   Finally, run the Django server using the command: `python manage.py runserver` in the base directory.
 - Screenshot of Rasa Chatbot is follows:
 
