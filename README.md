@@ -2,9 +2,9 @@
 Rasa chatbot for customer support and consultancy, integration with Django website
 ## Chatbot for customer support and consultancy services and integration with the website.
 There are several platforms available for chatbot development, but we used the Rasa framework for chatbot development and 
-Django for website development. Rasa is an open framework for developing AI chatbots, while Django is a Python-based web framework. Both frameworks are open-source.
-The chatbot is trained to answer basic customer questions and the FAQs are provided in a file named 'faqs.txt' in the project 
-directory. You can ask the chatbot basic questions such as the company name, request help, product recommendations, password
+Django for website development. Rasa is an open source framework for developing AI chatbots, while Django is a Python-based web framework. Both frameworks are open-source.
+The chatbot is trained to answered the basic customer questions and the FAQs are provided in a file named 'faqs.txt' in the project 
+directory. You can ask from chatbot basic questions such as the company name, request help, product recommendations, password
 resets, payment methods, return policies, and shipping information. Additionally, a form is available for placing orders. 
 To activate the form, you can ask something like "I want to order something." The Rasa form will be activated and will
 ask for details such as your name and the item you want to order, such as pizza, burger, or sandwiches.
@@ -20,14 +20,17 @@ Here are three general steps for developing a chatbot using Rasa and integrating
   the command kill the server by cntr+C and go to step 2.
 
 ## Step 2:
-- Create a directory for the Rasa chatbot in the base directory. You can also initiate the Rasa chatbot in the base directory,
+- Create a directory for the Rasa chatbot in the base directory. You can also initiate the Rasa chatbot in the base directory also out from base
+  directory,
   but it may make the project structure less clear.
 - Navigate to the Rasa directory by using the command: `cd rasa`
 - Initialize the Rasa chatbot using the command: `rasa init --no-prompt`, This will create the initial project structure.
-- Set up the chatbot according to your specific purpose. Once you have developed the chatbot, run the following command
+- Set up the chatbot according to your specific purpose. Once you have developed the chatbot, train the chatbot by the commond
+  `rasa train` and the run the following command
   in the command prompt or PowerShell (make sure you are in the Rasa directory):
-- `rasa run actions`. Then open another terminal to run the Rasa API core command: `rasa run -m models --enable-api --cors "*"`.
-  Once these two commands run successfully, stop the server by cntr+c and go to step 3.
+- `rasa run actions`. Then open another terminal to run the Rasa by : `rasa shell`.
+  Once these two commands run successfully,test the chatbot by asking specfic question after the testing,
+   stop the server by cntr+c and go to step 3 to ingetrate with django website.
 
 ## step 3:
 - To integrate the Rasa chatbot with the Django website, you need to make a few changes. Go to the `credentials.yml` file in the
@@ -67,9 +70,10 @@ Here are three general steps for developing a chatbot using Rasa and integrating
   })();
 </script>
 ```  
-- Make sure to change the API socketUrl to `http://localhost:5005` in the copied script. Once these changes are made,
-  run the chatbot and website again. To run the Rasa chatbot, navigate to the Rasa directory in any terminal and run
-  the command: "rasa run actions". Open a new terminal and run the API using the command: `rasa run -m models --enable-api --cors "*" `.  
+- Make sure to change the API socketUrl to `http://localhost:5005` in the copied script. Once these changes are done,
+  run the chatbot and website again. To run the Rasa chatbot, navigate to the Rasa directory in any terminal
+  run the API using the command: `rasa run -m models --enable-api --cors "*" --debug` and  and run
+  the command: `rasa run actions`.  
   Finally, run the Django server using the command: `python manage.py runserver` in the base directory.
 - Screenshot of Rasa Chatbot is follows:
 
